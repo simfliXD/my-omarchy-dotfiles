@@ -1,0 +1,207 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* -----------------------------------------------------
+   Global Reset & Base Typography
+   ----------------------------------------------------- */
+* {
+  background-color: @background;
+  color: @foreground;
+
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+}
+
+/* -----------------------------------------------------
+   Workspaces
+   ----------------------------------------------------- */
+#workspaces button {
+  min-width: 20px;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: @foreground;
+  border-bottom: 3px solid @foreground;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#workspaces button:not(.empty):not(.active) {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#workspaces button.empty {
+  opacity: 0.45;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: @foreground;
+}
+
+/* -----------------------------------------------------
+   Left Side Modules (Omarchy Logo)
+   ----------------------------------------------------- */
+#custom-omarchy {
+  padding: 4px 12px;
+  color: @foreground;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#custom-omarchy:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* -----------------------------------------------------
+   Unified Module Hover (Clock, Audio, WiFi, Battery, System, etc.)
+   ----------------------------------------------------- */
+#clock, 
+#pulseaudio, 
+#network, 
+#custom-wifi,         /* Matches your "custom/wifi" config */
+#custom-weather, 
+#battery,
+#custom-net_speed,
+#custom-system {
+  padding: 0 10px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.04);
+  color: @foreground;
+}
+
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-wifi:hover,
+#custom-weather:hover,
+#battery:hover,
+#custom-net_speed:hover,
+#custom-system:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: @foreground;
+}
+/* -----------------------------------------------------
+    Status Indicators (Recording, Idle, Do Not Disturb)
+   ----------------------------------------------------- */
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+  min-width: 12px;
+  margin-left: 5px;
+  margin-right: 0;
+  font-size: 12px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #a55555;
+}
+
+/* -----------------------------------------------------
+   Individual Module Colors
+   ----------------------------------------------------- */
+#clock {
+  color: #cba6f7;
+  font-weight: bold;
+}
+#pulseaudio {
+  color: #89dceb;
+}
+#network,
+#custom-wifi {
+  color: #89dceb;
+}
+#custom-weather {
+  color: #89dceb;
+}
+#custom-system {
+  color: #89dceb;
+}
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+  font-size: 10px;
+}
+
+/* Net Speed 3D Effect */
+#custom-net_speed {
+  color: #cdd6f4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+/* -----------------------------------------------------
+   Battery States
+   ----------------------------------------------------- */
+#battery {
+  color: #f9e2af;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #a6e3a1; /* Your green */
+}
+
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+}
+
+/* -----------------------------------------------------
+   TOOLTIPS (Essential for Dashboard scripts)
+   ----------------------------------------------------- */
+tooltip {
+  background: #11111b;
+  border: 2px solid #fab387;
+  border-radius: 12px;
+}
+
+tooltip label {
+  font-family: "JetBrainsMono Nerd Font"; /* REQUIRED for ASCII box alignment */
+  padding: 12px;
+  color: #cdd6f4;
+}
+
+/* -----------------------------------------------------
+   Extra Animations
+   ----------------------------------------------------- */
+#custom-weather.offline {
+  color: #f38ba8;
+  font-weight: bold;
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
