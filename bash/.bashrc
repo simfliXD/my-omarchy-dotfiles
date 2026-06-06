@@ -14,9 +14,16 @@ alias hello='cd; clear; fastfetch'
 alias ll='ls -lah'
 
 # change directory
+alias root='cd /'
 alias ~='cd ~'
 alias home='cd ~'
-alias root='cd /'
+alias projects='cd ~/Projects'
+alias downloads='cd ~/Downloads'
+alias documents='cd ~/Documents'
+alias music='cd ~/Music'
+alias pictures='cd ~/Pictures'
+alias videos='cd ~/Videos'
+
 
 # Log
 alias syslog='journalctl -f'
