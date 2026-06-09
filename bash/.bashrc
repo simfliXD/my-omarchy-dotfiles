@@ -58,7 +58,7 @@ extract() {
 }
 
 # System Update
-alias update='yay -Syu'
+alias update='sudo pacman -S archlinux-keyring --noconfirm  && yay -Syu'
 
 # Manage services
 alias sstart='sudo systemctl start'
