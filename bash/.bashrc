@@ -75,3 +75,5 @@ alias ports='ss -tulanp'
 alias listening='ss -tlnp'
 
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/share/../bin/env"
