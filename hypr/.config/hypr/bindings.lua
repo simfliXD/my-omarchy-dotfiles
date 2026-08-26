@@ -1,3 +1,4 @@
+
 -- Keep only your personal keybinding overrides here. Add new bindings or
 -- unbind defaults before replacing them.
 
@@ -28,8 +29,6 @@
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
--- Personal keybinding overrides migrated from bindings.conf.
--- Defaults are loaded first, so existing default bindings are unbound before replacement.
 
 -- Bitwarden replaces the default 1Password shortcut.
 hl.unbind("SUPER + SHIFT + SLASH")

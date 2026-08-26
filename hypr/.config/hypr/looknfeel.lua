@@ -48,9 +48,6 @@
 --     column_width = 0.97,
 --   },
 -- })
-
--- Personal look and feel overrides migrated from looknfeel.conf.
-
 -- Smart gaps for single tiled windows, ignoring special workspaces.
 hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 0, gaps_in = 0 })
 o.window({ float = false, workspace = "w[tv1]s[false]" }, { border_size = 0 })

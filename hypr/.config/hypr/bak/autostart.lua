@@ -1,5 +1,4 @@
--- Extra autostart processes.
--- o.launch_on_start("my-service")
+-- Extra autostart processes migrated from autostart.conf.
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("[workspace 1] omarchy-launch-browser")
