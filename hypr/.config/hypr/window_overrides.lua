@@ -58,22 +58,31 @@ o.window({ title = "^(Epic Games Launcher)$" }, { tag = "+gamelauncher" })
 o.window("^(Lutris|HeroicGamesLauncher|faugus-launcher)$", { tag = "+gamelauncher" })
 o.window("^(.*atlauncher.*)$", { tag = "+gamelauncher" })
 
--- Multimedia/music/settings/dialog tags.
+-- Multimedia tags.
 o.window("^([Aa]udacious)$", { tag = "+multimedia" })
 o.window("^([Mm]pv|vlc)$", { tag = "+multimedia_video" })
 
+-- Music tags.
 o.window("^(.*spotatui|spotify-qt|[Ss]potify|spotify-tui)$", { tag = "+music" })
 o.window({ title = "^(.*spotatui|spotify-tui)$" }, { tag = "+music" })
 o.window("^(cliamp)$", { tag = "+music" })
 
-o.window("^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$", { tag = "+settings" })
-o.window("^(qt5ct|qt6ct|[Yy]ad)$", { tag = "+settings" })
-
+-- Dialog tags
+o.window({ title = "^([Dd]iscord.*)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(Authentication Required)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(File Browser)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(Select Folder|Open Folder)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(Open File|Open Files)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(Save As)$" }, { tag = "+dialog" })
+
+-- Settings tag.
+o.window("^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$", { tag = "+settings" })
+o.window("^(qt5ct|qt6ct|Yad)$", { tag = "+settings" })
+
+-- Settings dialogs.
+o.window({ initial_title = "^(Settings)$" }, { tag = "+settings" })
+o.window({ initial_title = "^(Volume Control)$" }, { tag = "+settings" })
+o.window({ initial_title = "^(Audio Settings)$" }, { tag = "+settings" })
 
 -- Window rules based on tags.
 o.window({ tag = "email*" }, { workspace = "5" })
