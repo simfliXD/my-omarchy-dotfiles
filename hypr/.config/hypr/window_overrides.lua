@@ -48,21 +48,22 @@ o.window("^(kdenlive|shotcut|openshot-qt|flowblade)$", { tag = "+photo_video_edi
 o.window("^(davinci-resolve|davinci-resolve-studio)$", { tag = "+photo_video_editor" })
 o.window("^(darktable|rawtherapee)$", { tag = "+photo_video_editor" })
 
--- Game and launcher tags.
+-- Game tags
 o.window("^(gamescope)$", { tag = "+games" })
 o.window("^([Mm]inecraft.*)$", { tag = "+games" })
 o.window({ content = 3 }, { tag = "+games" }) -- Content type 3 = game
 
+-- Launcher tags
 o.window("^(steam_app_\\d+|steam)$", { tag = "+gamelauncher" })
 o.window({ title = "^(Epic Games Launcher)$" }, { tag = "+gamelauncher" })
-o.window("^(Lutris|HeroicGamesLauncher|faugus-launcher)$", { tag = "+gamelauncher" })
+o.window("^(Lutris|HeroicGamesLauncher|.*faugus-launcher)$", { tag = "+gamelauncher" })
 o.window("^(.*atlauncher.*)$", { tag = "+gamelauncher" })
 
--- Multimedia tags.
+-- Multimedia tags
 o.window("^([Aa]udacious)$", { tag = "+multimedia" })
 o.window("^([Mm]pv|vlc)$", { tag = "+multimedia_video" })
 
--- Music tags.
+-- Music tags
 o.window("^(.*spotatui|spotify-qt|[Ss]potify|spotify-tui)$", { tag = "+music" })
 o.window({ title = "^(.*spotatui|spotify-tui)$" }, { tag = "+music" })
 o.window("^(cliamp)$", { tag = "+music" })
@@ -75,16 +76,16 @@ o.window({ initial_title = "^(Select Folder|Open Folder)$" }, { tag = "+dialog" 
 o.window({ initial_title = "^(Open File|Open Files)$" }, { tag = "+dialog" })
 o.window({ initial_title = "^(Save As)$" }, { tag = "+dialog" })
 
--- Settings tag.
+-- Settings tag
 o.window("^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$", { tag = "+settings" })
 o.window("^(qt5ct|qt6ct|Yad)$", { tag = "+settings" })
 
--- Settings dialogs.
+-- Settings dialogs
 o.window({ initial_title = "^(Settings)$" }, { tag = "+settings" })
 o.window({ initial_title = "^(Volume Control)$" }, { tag = "+settings" })
 o.window({ initial_title = "^(Audio Settings)$" }, { tag = "+settings" })
 
--- Window rules based on tags.
+-- Window rules based on tags
 o.window({ tag = "email*" }, { workspace = "5" })
 o.window({ tag = "gamelauncher*" }, { workspace = "2" })
 o.window({ tag = "games*" }, { workspace = "2" })
@@ -93,33 +94,33 @@ o.window({ tag = "development*" }, { workspace = "3" })
 o.window({ tag = "multimedia_video*" }, { workspace = "2" })
 o.window({ tag = "music*" }, { workspace = "6" })
 
--- Browser.
+-- Browser
 o.window({ fullscreen = false, tag = "browser*" }, { opacity = "1.0 1.0" })
 
--- Social media.
+-- Social media
 o.window({ tag = "socialmedia*" }, { workspace = "5" })
 
--- Code editor.
+-- Code editor
 o.window({ tag = "code_editor*" }, { workspace = "4" })
 o.window({ class = "(codium|codium-url-handler|VSCodium)", title = "(.*codium.*|.*VSCodium.*)" }, { float = true })
 o.window({ float = false, workspace = "w[tv1]s[false]", tag = "code_editor*" }, { opacity = "1.0 1.0" })
 
--- Photo/video editors.
+-- Photo/video editors
 o.window({ tag = "photo_video_editor*" }, { workspace = "4" })
 o.window({ tag = "photo_video_editor*" }, { opacity = "1.0 1.0" })
 o.window({ float = false, workspace = "w[tv1]s[false]", tag = "photo_video_editor*" }, { border_size = 0 })
 o.window({ float = false, workspace = "w[tv1]s[false]", tag = "photo_video_editor*" }, { rounding = 0 })
 
--- Game launchers.
+-- Game launchers
 o.window({ tag = "gamelauncher*" }, { float = true, center = true })
 
--- Games.
+-- Games
 o.window({ tag = "games*" }, { no_blur = true })
 o.window({ tag = "games*" }, { fullscreen = 1 })
 
--- Music.
+-- Music
 o.window({ tag = "music*" }, { tile = true })
 
--- Dialogs.
+-- Dialogs
 o.window({ tag = "dialog*" }, { float = true, center = true, pin = true })
 o.window({ tag = "dialog*" }, { size = "monitor_w*0.5 monitor_h*0.75" })
