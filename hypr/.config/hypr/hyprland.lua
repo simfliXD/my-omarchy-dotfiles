@@ -20,8 +20,8 @@ require("hypr.monitors")
 require("hypr.input")
 require("hypr.bindings")
 require("hypr.looknfeel")
+require("hypr.window_overrides") -- Before autostart so autostart apps start on the right workspace
 require("hypr.autostart")
-require("hypr.window_overrides")
 
 -- Toggle config flags dynamically.
 require("default.hypr.toggles")

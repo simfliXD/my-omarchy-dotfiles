@@ -1,7 +1,6 @@
 -- Extra autostart processes.
 -- o.launch_on_start("my-service")
 
-hl.on("hyprland.start", function()
-  hl.exec_cmd("[workspace 1] omarchy-launch-browser")
-  hl.exec_cmd("[workspace 6] omarchy-launch-tui spotatui")
-end)
+
+o.launch_on_start("omarchy-launch-browser")
+o.launch_on_start("omarchy-launch-tui spotatui")
