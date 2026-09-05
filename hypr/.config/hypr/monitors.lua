@@ -18,12 +18,8 @@ hl.monitor({ output = "", mode = "preferred", position = "auto", scale = omarchy
 -- crisp instead of being stretched by the compositor. GTK only honors whole
 -- numbers, so use the nearest integer to the monitor scale, and restart an
 -- app for a change to reach it.
-local omarchy_gdk_scale = 2
+local omarchy_gdk_scale = 3
 hl.env("GDK_SCALE", tostring(omarchy_gdk_scale))
-
--- Monitor and workspace layout migrated from monitors.conf.
-
-hl.env("GDK_SCALE", "1")
 
 -- Specific monitors.
 hl.monitor({
@@ -40,8 +36,6 @@ hl.monitor({
   scale = 1,
 })
 
--- Fallback for other monitors, preserving the old catch-all scale.
-hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 4 })
 
 -- Assign workspaces to monitors.
 hl.workspace_rule({ workspace = "name:1", monitor = "DP-1" })

@@ -27,7 +27,6 @@
     "playtime": 0,
     "gamepad-navigation": "False",
     "minimized-startup-enabled": "False",
-    "categories-and-sort-enabled": "False",
     "header-bar": "False",
     "backup-auto-enabled": "False",
     "backup-frequency": "daily",
@@ -46,5 +45,8 @@
     "cover-size": "100",
     "sort": "alpha",
     "category": "all",
-    "steam-user": "all"
+    "steam-user": "all",
+    "categories-enabled": "False",
+    "sort-enabled": "False",
+    "steamgriddb-enabled": "False"
 }

@@ -67,6 +67,7 @@ o.window("^([Mm]pv|vlc)$", { tag = "+multimedia_video" })
 o.window("^(.*spotatui|spotify-qt|[Ss]potify|spotify-tui)$", { tag = "+music" })
 o.window({ title = "^(.*spotatui|spotify-tui)$" }, { tag = "+music" })
 o.window("^(cliamp)$", { tag = "+music" })
+o.window({ title = "^(cliamp)$" }, { tag = "+music" })
 
 -- Dialog tags
 o.window({ title = "^([Dd]iscord.*)$" }, { tag = "+dialog" })
