@@ -1,5 +1,5 @@
 {
-    "auto-close-on-launch": "False",
+    "auto-close-on-launch": "True",
     "default-prefix": "/home/simfli/Faugus",
     "mangohud": "False",
     "gamemode": "True",
@@ -7,7 +7,7 @@
     "no-sleep-enabled": "False",
     "default-runner": "Proton-CachyOS Latest",
     "lossless-location": "",
-    "discrete-gpu": "False",
+    "discrete-gpu": "True",
     "splash-window-enabled": "True",
     "system-tray": "False",
     "autostart-enabled": "False",
