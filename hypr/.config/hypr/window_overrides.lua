@@ -50,14 +50,14 @@ o.window("^(darktable|rawtherapee)$", { tag = "+photo_video_editor" })
 
 -- Game tags
 o.window("^(gamescope)$", { tag = "+games" })
-o.window("^([Mm]inecraft.*)$", { tag = "+games" })
+o.window({ title = "^([Mm]inecraft.*)$" }, { tag = "+games" })
 o.window({ content = 3 }, { tag = "+games" }) -- Content type 3 = game
 
 -- Launcher tags
 o.window("^(steam_app_\\d+|steam)$", { tag = "+gamelauncher" })
 o.window({ title = "^(Epic Games Launcher)$" }, { tag = "+gamelauncher" })
 o.window("^(Lutris|HeroicGamesLauncher|.*faugus-launcher)$", { tag = "+gamelauncher" })
-o.window("^(.*atlauncher.*)$", { tag = "+gamelauncher" })
+o.window("^(.*atlauncher.*|PandoraLauncher)$", { tag = "+gamelauncher" })
 
 -- Multimedia tags
 o.window("^([Aa]udacious)$", { tag = "+multimedia" })
