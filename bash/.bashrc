@@ -79,6 +79,6 @@ alias localip="ip addr show | grep 'inet ' | grep -v '127.0.0.1'"
 alias ports='ss -tulanp'
 alias listening='ss -tlnp'
 
-. "$HOME/.cargo/env"
 
 . "$HOME/.local/share/../bin/env"
+. "$HOME/.cargo/env"
